@@ -17,7 +17,9 @@ namespace csharpgregslist.Models
     public string Model { get; set; }
     [MaxLength(50)]
     public string Description { get; set; }
+    [Required]
     public int Year { get; set; }
+    [Required]
     public int Price { get; set; }
 
     public string Id { get; set; } = Guid.NewGuid().ToString();

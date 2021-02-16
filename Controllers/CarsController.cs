@@ -65,13 +65,16 @@ namespace csharpgregslist.Controllers
     {
       try
       {
+        // NOTE Find the car where the id passed equals the Id on the object
         Car foundCar = FakeDB.Cars.Find(c => c.Id == carId);
+
+        // NOTE Once found the updated instance of the car equals (Check if something exists) if it does, Overwrite that : if not use the data from the created.
         carUpdate.Make = carUpdate.Make != null ? carUpdate.Make : foundCar.Make;
         carUpdate.Model = carUpdate.Model != null ? carUpdate.Model : foundCar.Model;
         carUpdate.Description = carUpdate.Description != null ? carUpdate.Description : foundCar.Description;
-        carUpdate.Year = carUpdate.Year != null ? carUpdate.Year : foundCar.Year;
-        carUpdate.Price = carUpdate.Price != null ? carUpdate.Price : foundCar.Price;
 
+        // NOTE Return the updated instance.
+        return carUpdate;
       }
       catch (System.Exception err)
       {
