@@ -11,7 +11,7 @@ namespace csharpgregslist.Services
   {
 
     // Get All
-    public IEnumerable<Car> Get()
+    public IEnumerable<Car> getCars()
     {
       return FakeDB.Cars;
     }

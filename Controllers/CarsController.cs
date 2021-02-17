@@ -26,7 +26,7 @@ namespace csharpgregslist.Controllers
     {
       try
       {
-        return Ok(_cs.Get());
+        return Ok(_cs.getCars());
       }
       catch (System.Exception err)
       {
