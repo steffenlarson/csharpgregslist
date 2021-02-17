@@ -95,11 +95,11 @@ namespace csharpgregslist.Controllers
 
 
     [HttpPut("{carId}")]
-    public ActionResult<Car> editCar([FromBody] Car updatedCar, string id)
+    public ActionResult<Car> editCar([FromBody] Car updatedCar, string carId)
     {
       try
       {
-        updatedCar.Id = id;
+        updatedCar.Id = carId;
         Car carToEdit = _cs.Edit(updatedCar);
         return Ok(carToEdit);
       }
