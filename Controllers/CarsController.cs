@@ -41,7 +41,7 @@ namespace csharpgregslist.Controllers
     {
       try
       {
-        Car carToReturn = _cs.GetCar(carId);
+        Car carToReturn = _cs.getCar(carId);
         return Ok(carToReturn);
       }
       catch (System.Exception err)

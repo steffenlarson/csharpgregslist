@@ -18,7 +18,7 @@ namespace csharpgregslist.Services
 
 
     // Get By Id
-    public Car GetCar(string id)
+    public Car getCar(string id)
     {
       Car carToGet = FakeDB.Cars.Find(c => c.Id == id);
       if (carToGet == null)
