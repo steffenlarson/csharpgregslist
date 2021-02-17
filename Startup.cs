@@ -30,6 +30,7 @@ namespace csharpgregslist
 
 
       services.AddTransient<CarsService>();
+      services.AddTransient<HousesService>();
 
 
       services.AddControllers();

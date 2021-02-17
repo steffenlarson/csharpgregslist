@@ -1,0 +1,21 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace csharpgregslist.Models
+{
+
+
+
+  public class House
+  {
+
+    public int Year { get; set; }
+    [Range(1, 10)]
+    public int Bedrooms { get; set; }
+    [Range(1, 10)]
+    public int Bathrooms { get; set; }
+    [Required]
+    public int Price { get; set; }
+    public string Description { get; set; }
+  }
+}
