@@ -25,6 +25,20 @@ namespace csharpgregslist.Controllers
       }
     }
 
+    [HttpGet("{carId}")]
+    public ActionResult<Car> GetCarById(string carId)
+    {
+      try
+      {
+        Car carToReturn = FakeDB.Cars.Find(c => c.Id == carId);
+        return Ok(carToReturn);
+      }
+      catch (System.Exception err)
+      {
+        return BadRequest(err.Message);
+      }
+    }
+
 
     [HttpPost]
     public ActionResult<Car> Create([FromBody] Car newCar)
