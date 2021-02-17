@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using csharpgregslist.Services;
 
 namespace csharpgregslist
 {
@@ -29,6 +30,7 @@ namespace csharpgregslist
 
 
       services.AddTransient<CarsService>();
+
 
       services.AddControllers();
       services.AddSwaggerGen(c =>
